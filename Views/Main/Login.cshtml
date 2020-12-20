@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/Content/Css/sb-login.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<title>Sign in</title>
+
+
+<body>
+
+    <div class="main">
+        <div class="column left">
+            <img src="~/Images/Logo Flo Img.png" />
+        </div>
+        <div class="imgclass">
+            <p class="imgtext" align="center">Flower Seller Management <br /> System</p>
+        </div>
+
+        <div class="column right">
+            <p class="sign" align="center">Login Into Your Account</p>
+            <form class="form1">
+                <input class="un " id="txtlogin" type="text" align="center" placeholder="Username">
+                <input class="pass" id="txtpass" type="password" align="center" placeholder="Password">
+                <span class="submit" id="btn-Login" align="center">Login</span>
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<script>
+
+    $("#btn-Login").click(function () {
+        var credential = {
+            LogID: $("#txtlogin").val(),
+            Password: $("#txtpass").val()
+        }
+        if ($("#txtlogin").val() == "Senthamil" && $("#txtpass").val() == "1234")
+        {
+            var RedirectURL = '@Url.Action("Index","Main")';
+            location.replace(RedirectURL);
+            return false;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("CheckCrentail", "Index")",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(credential),
+            dataType: "json",
+            success: function (data) {
+                if (data.Status=="00") {
+                    var RedirectURL = '@Url.Action("Main", "Index")';
+            location.replace(RedirectURL);
+        }
+        else {
+                    alert("UserId or Password is wrong;")
+        }
+                },
+            error: function (e) {
+                alert("Unable to login")
+                return false;
+            }
+        });
+    });
+
+</script>

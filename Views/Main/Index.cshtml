@@ -1,0 +1,624 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Flo Sel </title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="~/Content/css/sb-admin.css" rel="stylesheet">
+    <!-- Sweet Alert-->  
+    <link href="~/Content/vendor/SweetAlert.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+        <a class="navbar-brand text-white mr-1">Flo Sel</a>
+
+        <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+            <i class="fas fa-bars" style="margin-left:8.2rem;"></i>
+        </button>
+
+        <!-- Navbar Search -->
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+
+
+            <div class="input-group-append">
+                <button class="btn btn-outline-warning" type="button" id="LogBtn">
+                    <i class="fas fa-sign-out-alt">  Logout</i>
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Navbar -->
+
+
+    </nav>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+
+            <li>
+                <div class="text-center">
+                    <img src="~/Images/Profile_Avatar.jpg" class="img-thumbnail" />
+                    <h6>Senthamil Mukilan</h6>
+                </div>
+            </li>
+            <li>
+                <hr />
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" data-name="DvUser">
+                    <i class="fas fa-user-alt"></i>
+                    <span>User Page</span>
+                </a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-name="DvDealer">
+                    <i class="fas fa-fw fa-address-card"></i>
+                    <span>Dealer Information</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-name="DvBuying">
+                    <i class="fas fa-fw fa-cart-plus"></i>
+                    <span>Purchase Details</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-name="DvSorting">
+                    <i class="fas fa-fw fa-filter"></i>
+                    <span>Filtering Data</span>
+                </a>
+            </li>
+            @*<li class="nav-item">
+                    <a class="nav-link" data-name="DvAddDealer">
+                        <i class="fas fa-fw fa-chalkboard"></i>
+                        <span>Testing Page</span>
+                    </a>
+                </li>*@
+        </ul>
+
+        <!-- content-wrapper -->
+
+        <div id="content-wrapper">
+
+            <!-- User Page-->
+            <div id="DvUser" class="ClsDvContent">
+                <div class="container-fluid">
+
+                    <!-- Breadcrumbs-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-feather"></i>
+                            <span> Flower Seller Management System</span>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-user-alt"></i>
+                            <span> User Page</span>
+                        </li>
+                    </ol>
+
+                    <!-- Icon Cards-->
+
+                    <div class="row">
+
+                        <div class="col-xl-4 col-sm-4 mb-3">
+                            <div class="card text-white bg-primary o-hidden h-100">
+                                <div class="card-header">Dealer Information !</div>
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-fw fa-address-card"></i>
+                                    </div>
+                                    <div class="mr-3">In This Module User Can Create, Edit, Delete and View The Basic Details Of Whole Sale Dealer.</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-xl-4 col-sm-4 mb-3">
+                            <div class="card text-white bg-success o-hidden h-100">
+                                <div class="card-header">Purchase Details !</div>
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-fw fa-cart-plus"></i>
+                                    </div>
+                                    <div class="mr-3">In This Module User Can Enter And Store The Buying Details Of The Flower.</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-sm-4 mb-3">
+                            <div class="card text-white bg-danger o-hidden h-100">
+                                <div class="card-header">Filtering Data !</div>
+                                <div class="card-body">
+                                    <div class="card-body-icon">
+                                        <i class="fas fa-fw fa-filter"></i>
+                                    </div>
+                                    <div class="mr-3">In This Module User Can Filter The Buying Details Of The Flower With Different Options. </div>
+                                </div>
+
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dealer Information -->
+            <div id="DvDealer" class="ClsDvContent" style="display:none;">
+                <div class="container-fluid">
+                    <!-- Breadcrumbs-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-feather"></i>
+                            <span> Flower Seller Management System</span>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-address-card"></i>
+                            <span> Dealer Information </span>
+                        </li>
+                    </ol>
+
+                    <!-- DataTables Example -->
+                    <div class="card mb-3 ">
+                        <div class="card-header text-white bg-primary-body">
+                            <i class="fas fa-table"></i>
+                            Details Of Whole Sale Dealer
+                        </div>
+                        <div class="card-body ">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-black o-hidden h-100" id="DealerTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Phone</th>
+                                            <th>View</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="SetDealerList">
+                                        <tr class="odd" style="text-align:center;"><td valign="top" colspan="6" class="DealerTables_empty">No data available in table</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer text-white bg-primary-body">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button" id="AddNewDealerBtn"  style="margin-left: 14rem;">
+                                    <i class="fas fa-user-plus">  Add New Dealer</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Buying Details -->
+            <div id="DvBuying" class="ClsDvContent" style="display:none;">
+                <div class="container-fluid">
+                    <!-- Breadcrumbs-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-feather"></i>
+                            <span> Flower Seller Management System</span>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-cart-plus"></i>
+                            <span> Purchase Details</span>
+                        </li>
+                    </ol>
+
+                    <!-- Flower Entry Form-->
+                    <div class="card mb-3">
+                        <div class="card-header text-white bg-success-body">
+                            <i class="fas fa-keyboard"></i>
+                            Purchased Flower Entry
+                        </div>
+                        <div class="card-body">
+                            <form id="EntryForm">
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label for="Dealer">Choose a Dealer</label>
+                                        <select class="form-control SelDeName" id="selDea">
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="Dealer">Choose a Flower</label>
+                                        <select class="form-control SelFloName" id="selFlo">
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Date</label>
+                                        <input type="date" class="form-control" placeholder="Date" id="txtdate" />
+                                    </div>
+                                </div>
+
+                                <div row class="row form-group">
+                                    <div class="col-md-4">
+                                        <label>Quantity</label>
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-balance-scale"></i>
+                                            <input type="text" placeholder="0" class="form-control clscalculation" id="txtquantity" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Price Per Quantity</label>
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-money-bill-alt"></i>
+                                            <input type="text" placeholder="0" class="form-control clscalculation" id="txtprice" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Amount</label>
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-money-check"></i>
+                                            <input type="text" placeholder="0" class="form-control" id="txtamount" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer bg-success-body">
+                            <div class="input-group-append"  style="margin-left: 14rem;">
+                                <button class="btn btn-success btn-sm mr-2" type="button" id="SaveEntryBtn">
+                                    <i class="fas fa-save">  Save</i>
+                                </button>
+                                <button class="btn btn-success btn-sm " type="button" id="ClearEntry">
+                                    <i class="fas fa fa-recycle">  Clear</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sorted View -->
+            <div id="DvSorting" class="ClsDvContent" style="display:none;">
+                <div class="container-fluid">
+                    <!-- Breadcrumbs-->
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-feather"></i>
+                            <span> Flower Seller Management System</span>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <i class="fas fa-fw fa-filter"></i>
+                            <span> Filtering Data</span>
+                        </li>
+                    </ol>
+
+                    <!-- Filter Data-->
+                    <div class="card mb-3">
+                        <div class="card-header text-white bg-danger-body">
+                            <i class="fas fa-clipboard"></i>
+                            Filtering
+                        </div>
+                        <div class="card-body ">
+                            <form id="FilterForm">
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label for="Dealer">Choose a Dealer</label>
+                                        <select class="form-control SelDeName" id="selDeaname">
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="Dealer">Choose a Flower</label>
+                                        <select class="form-control SelFloName" id="selFloname">
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Date</label>
+                                        <input type="date" class="form-control" placeholder="Date" id="purdate" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-footer bg-danger-body">
+                            <div class="input-group-append"  style="margin-left: 14rem;">
+                                <button class="btn btn-danger btn-sm mr-2" type="button" id="SearchBtn">
+                                    <i class="fas fa-file-download">  Search</i>
+                                </button>
+                                <button class="btn btn-danger btn-sm " type="button" id="ClearFilter">
+                                    <i class="fas fa fa-recycle">  Clear</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:none;" id="ResultTable">
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-black o-hidden h-100" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Name</th>
+                                        <th>Flower</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="ResultTableBody">
+                                    <tr class="odd" style="text-align:center;"><td valign="top" colspan="6" class="DealerTables_empty">No data available in table</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Dealer -->
+            <div class="modal fade" id="AddNewDealerForm" tabindex="-1" role="dialog" aria-labelledby="AddNewDealerFormTitle" aria-hidden="true">
+                <div class="modal-dialog" style="max-width:61%;" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="AddNewDealerFormTitle"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body scrollable-panel">
+                            <form id="NewDealerForm">
+                                <div class="row form-group">
+                                    <div class="col-md-12 heading">Personal Information</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class=" col-md-5">
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-user"></i>
+                                            <input type="text" placeholder="Name" class="form-control clscommon" id="TxBoxName" />
+                                        </div>
+                                    </div>
+
+                                    <div class=" col-md-5">
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-id-card"></i>
+                                            <input type="text" placeholder="Address" class="form-control clscommon" id="TxBoxAddress" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-5">
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-phone"></i>
+                                            <input type="text" placeholder="Phone Number" class="form-control clscommon" id="TxBoxPhone" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <div class="inner-addon left-addon">
+                                            <i class="fas fa-fw fa-envelope"></i>
+                                            <input type="text" placeholder="Email Id" class="form-control clscommon" id="TxBoxEmail" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12 heading">Business Information</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-4">
+                                        <label> Flower Type  </label>
+                                    </div>
+                                </div>
+
+                                <div id="DivFlowerChcBox" class="row">
+
+                                </div>
+
+                                <div class="row form-group" id="TxtNewFlower" style="display:none;">
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" placeholder="Enter New Flower" id="AddFlowerTxt" />
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button class="btn btn-outline-primary btn-sm" type="button" id="OkBtn">
+                                            <i class="fas fa fa-suitcase"> Add</i>
+                                        </button>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <button class="btn btn-outline-primary btn-sm" type="button" id="btnCancelFlower">
+                                            <i class="fas fa fa-suitcase">Cancel</i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div id="DivAddFlower">
+                                        <button class="btn btn-outline-primary btn-sm" type="button" id="AddFlowerBtn">
+                                            <i class="fas fa fa-remove">  Add Flower</i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                <div class="row form-group">
+                                    <label> Agreement  </label>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-sm-3">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="OptRadio" class="ClsRaBtn clscommon" id="PartialDateRaBtn" data-name="DnPartialDate" />Date
+                                        </label>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="OptRadio" class="ClsRaBtn clscommon" id="LifeTimeRaBtn" data-name="DnLifeTime" />LifeTime
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="OptRadio" class="ClsRaBtn clscommon" id="NoneRaBtn" data-name="DnNone" />None
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="DnPartialDate" class="ClsDate" style="display:none;">
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label>From Date</label>
+                                            <input type="date" class="form-control clscommon" placeholder="From Date" id="Fromdate" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>To Date</label>
+                                            <input type="date" class="form-control clscommon" placeholder="To Date" id="Todate" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @*<div class="row form-group">
+            <label> Document </label>
+        </div>
+        <div class="row form-group">
+            <div class=" col-6">
+                <input type="file" placeholder="choose File" class="form-control  input-sm" />
+                <small style="color:red;">Upload Only PDF File</small>
+            </div>
+        </div>*@
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div id="DivSaveClear">
+                                <button class="btn btn-primary btn-sm mr-2" type="button" id="SaveNewDealerBtn">
+                                    <i class="fas fa-save">  Save</i>
+                                </button>
+                                <button class="btn btn-primary btn-sm" type="button" id="ClearNewDealer">
+                                    <i class="fas fa fa-recycle">  Clear</i>
+                                </button>
+                            </div>
+                            <div id="DivUpdate" style="display:none;">
+                                <button class="btn btn-primary btn-sm mr-2" type="button" id="UpdateDealerBtn">
+                                    <i class="fas fa-save">  Update</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    @*<a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>*@
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" id="LogoutBtn">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Conformation Modal-->
+    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are You Sure?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Delete" below if you want to permanently delete the record .</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" id="DeleteBtn">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sucess Alert-->
+    <div class="alert alert-warning">
+
+
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/Content/js/sb-admin.min.js"></script>
+    <script src="~/Content/js/FloSel-Script.js"></script>
+    <!-- Sweet Alert-->
+
+    <script src="~/Content/js/Sweetalert.js"></script>
+    <!-- Url Script-->
+    <script>
+    var AddDealerUrl = "@Url.Action("InsertDealerDetails" , "Main")";
+    var PurchaseUrl = "@Url.Action("PurchaseDetails" , "Main")";
+    var DeleteUrl = "@Url.Action("DeleteDealerDetails" , "Main")";
+    var AddFlowerUrl = "@Url.Action("InsertNewFlower" , "Main")";
+    var UpdateUrl = "@Url.Action("UpdateDealerDetails" , "Main")";
+    var LogouyURL = "@Url.Action("Login", "Main")";
+    var GetDealerTable="@Url.Action("GetDealerTable", "Main")";
+    </script>
+
+</body>
+
+</html>
+
+
+
+
